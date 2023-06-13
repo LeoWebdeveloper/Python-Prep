@@ -125,6 +125,21 @@
 # 15) Crear un ciclo while que encuentre dentro del rango de 100 a 300 el primer número divisible por 3 y además múltiplo de 6
 
 # In[75]:
-
+encontrado = False
+while True:
+    for i in range(100, 300):
+        if i % 6 == 0:
+            num_str = str(i)
+            total_sum = 0
+            for digit in num_str:
+                total_sum += int(digit)
+            
+            if total_sum % 3 == 0:
+                print(i)
+                encontrado = True
+                break
+    
+    if encontrado:
+        break
 
 
